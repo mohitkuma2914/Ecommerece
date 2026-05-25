@@ -18,6 +18,7 @@ public class SellerConverter {
     public static SellerResponse sellerToSellerResponse(Seller seller){
          return SellerResponse .builder()
                 .name(seller.getName())
+                 .mobileNo(seller.getMobileNo())
                 .gstNo(seller.getGstNo()).build();
     }
 

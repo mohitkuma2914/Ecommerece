@@ -5,6 +5,8 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,5 +29,9 @@ public class Customer {
     private Gender gender;
     @CreationTimestamp
     private Date createdAt;
+    @OneToMany(mappedBy = "customer")
+    List<OrderEntity>  orders=new ArrayList<>();
+    @OneToOne(mappedBy ="customer",cascade = CascadeType.ALL)
+    private Aadhar aadhar;
 
 }

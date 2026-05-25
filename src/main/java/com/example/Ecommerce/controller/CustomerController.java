@@ -13,12 +13,12 @@ import javax.naming.Name;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/customer ")
+@RequestMapping("/api/v1/customer")
 public class CustomerController {
     @Autowired
     CustomerService customerService;
     @PostMapping
-    public ResponseEntity addCustomer(CustomerRequest customerRequest){
+    public ResponseEntity addCustomer(@RequestBody CustomerRequest customerRequest){
         CustomerResponse response=customerService.addCustomer(customerRequest);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }

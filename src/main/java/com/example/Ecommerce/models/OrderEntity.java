@@ -29,4 +29,6 @@ public class OrderEntity {
     @ManyToMany
     @JoinTable(name = "order_product")
     List<Product> products = new ArrayList<>();
+
+
 }
