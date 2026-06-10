@@ -20,6 +20,7 @@ public class Customer {
     private int customerId;
 
     private String name;
+    private String age;
     private String address;
     @Column(nullable = false)
     private  long mobNo;

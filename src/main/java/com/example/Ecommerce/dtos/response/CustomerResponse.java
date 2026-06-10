@@ -11,5 +11,6 @@ import java.sql.Date;
 public class CustomerResponse {
     private String name;
     private String email;
+    private  String age;
     private Date createdAt;
 }
